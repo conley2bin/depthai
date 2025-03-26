@@ -39,7 +39,17 @@ if not in_venv:
 
 subprocess.check_call(pip_install + ["pip", "-U"])
 
-subprocess.check_call(pip_call + ["uninstall", "opencv-python", "opencv-contrib-python", "--yes"])
+# 仅在存在包时卸载
+try:
+    subprocess.check_call(["conda", "list | grep opencv-python"], shell=True)
+    subprocess.check_call(["conda", "uninstall", "opencv-python", "opencv-contrib-python", "--yes"])
+except subprocess.CalledProcessError:
+    try:
+        subprocess.check_call(pip_call + ["list | grep opencv-python"], shell=True)
+        subprocess.check_call(pip_call + ["uninstall", "opencv-python", "opencv-contrib-python", "--yes"])
+    except subprocess.CalledProcessError:
+        print("OpenCV packages not found, skipping uninstall")
+
 subprocess.check_call(pip_call + ["uninstall", "depthai", "--yes"])
 subprocess.check_call(pip_package_install + ["-r", "requirements.txt"], cwd=script_directory)
 
