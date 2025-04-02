@@ -12,6 +12,6 @@ python calibrate.py --squareSizeCm 4.42 \
                     --squaresX 13 \
                     --squaresY 7 \
                     --cameraMode perspective \
-                    --disableCamera left right\
+                    --disableCamera left right \
                     --enablePolygonsDisplay \
                     --mode process \
