@@ -30,7 +30,6 @@ share/python-wheels/
 MANIFEST
 *.idea
 # DepthAI-Specific
-*dataset*
 .fw_cache/
 depthai.calib
 mesh_left.calib

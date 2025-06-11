@@ -1,0 +1,5 @@
+Marker Size: 3.3 cm
+Square Size: 4.42 cm
+Number of squaresX: 13
+Number of squaresY: 7
+rgb-reprojection: 0.4139600139758142

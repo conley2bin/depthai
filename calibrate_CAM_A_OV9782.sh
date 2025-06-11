@@ -1,6 +1,6 @@
 # calibrate_CAM_A_OV9782.sh Description: Calibrate camera CAM_A_OV9782
 
-# Hfov40_dataset:
+# Hfov140_dataset:
 python calibrate.py --squareSizeCm 4.42 \
                     --markerSizeCm 3.30 \
                     --squaresX 13 \
