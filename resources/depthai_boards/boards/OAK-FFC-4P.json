@@ -1,0 +1,15 @@
+{
+    "board_config":
+    {
+        "name": "OAK-FFC-4P",
+        "revision": "R3M1E3",
+        "cameras":{
+            "CAM_A": {
+                "name": "rgb",
+                "hfov": 140,
+                "type": "color",
+                "sensorName": "OV9782"
+            }
+        }
+    }
+}   
